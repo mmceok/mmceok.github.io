@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>生成字符串的MD5值</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <label for="input">输入字符串：</label>
+      <input type="text" id="input" />
+      <button onclick="generateMD5()">生成MD5</button>
+    </div>
+    <div>
+      <label for="output">MD5值：</label>
+      <input type="text" id="output" readonly />
+    </div>
+
+    <script>
+      function generateMD5() {
+        var input = document.getElementById("input").value;
+        var output = document.getElementById("output");
+        output.value = md5(input);
+      }
+    </script>
+  </body>
+</html>
